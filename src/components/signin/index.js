@@ -37,7 +37,7 @@ export default function Signin() {
             />
           </Box>
           <Button className={styles.buttonPr} variant="contained">
-            Sign Up
+            Sign up
           </Button>
           <Link className={`container ${styles.forgotPsw}`}>
             Forgot password?

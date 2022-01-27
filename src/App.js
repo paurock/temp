@@ -5,16 +5,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
   components: {
-    // Name of the component
-    MuiContainer: {
-      styleOverrides: {
-        root: {
-          position: 'absolute',
-          top: '50%',
-          transform: 'translateY(-50%)',
-        },
-      },
-    },
     MuiButton: {
       styleOverrides: {
         // Name of the slot
@@ -23,15 +13,16 @@ const theme = createTheme({
           border: '5px solid transparent',
           borderRadius: '5px',
           fontWeight: 600,
-          fontSize: '18px',
-          width: '240px',
+          fontSize: '16px',
+          width:'300px',
           height: '50px',
-          marginTop: '15px',
+          marginTop: '0',
           marginLeft: 'auto',
           marginRight: 'auto',
           padding: '0 15px',
           display: 'block',
           backgroundColor: '#302a42',
+          textTransform: 'none'           
         },
       },
     },

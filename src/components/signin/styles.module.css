@@ -13,25 +13,31 @@
   );
 }
 .container {
+  position: relative;
+  top: 190px;
+  left: -7px;
   width: 360px;
   height: 420px;
   margin: 0 auto;
   background-color: white;
   background: rgba(255, 255, 255, 0.4);
-  padding: 25px 0;
+  padding-top: 7px;
 }
 
 .boxLogo {
-  width: 77;
-  height: 77;
+  width: 77px;
+  height: 77px;
   z-index: 10;
   margin: 0 auto;
   margin-top: 25px;
 }
 
 .logo {
-  width: 77px;
-  height: 77px;
+  position: relative;
+  top: -2px;
+  left: -2px;
+  width: 79px;
+  height: 79px;
 }
 .logo:hover {
   cursor: pointer;
@@ -40,12 +46,13 @@
 .title {
   color: #302a42;
   font-size: 18px;
-  font-family: 'Arial', Arial, sans-serif;
+  font-family: "Arial", Arial, sans-serif;
   line-height: 1.45;
   font-weight: 700;
   background-position: center center;
   border-color: transparent;
   border-style: solid;
+  text-align: center;
 }
 .inputWrapper {
   margin: 0 30px;
@@ -53,15 +60,15 @@
 .email,
 .psw {
   background-color: white;
+  top: -10px;
   margin: 10px 0;
-  padding: 5px 10px;
+  padding: 5px 15px;
   min-width: 243px;
   height: 40px;
   width: 100%;
 }
 
 .forgotPsw {
-  margin-top: 35px;
   display: block;
   color: #302a42;
   font-size: 14px;
@@ -70,6 +77,10 @@
   background-position: center center;
   border-color: transparent;
   border-style: solid;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  height: 93px;
 }
 .forgotPsw:hover {
   cursor: pointer;

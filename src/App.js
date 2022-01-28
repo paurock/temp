@@ -1,7 +1,13 @@
 //import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 import Signin from './components/signin';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import BagPage from './components/bagPage';
 
 const theme = createTheme({
   components: {
@@ -38,7 +44,13 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Signin />
+        <BrowserRouter>
+          <Routes>  
+            <Route path="signin" element={<Signin />}/>
+            <Route path="bag" element={ <BagPage/>}/> 
+           </Routes>
+        </BrowserRouter>
+       
       </ThemeProvider>
     </div>
   );

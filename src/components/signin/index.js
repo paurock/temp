@@ -10,6 +10,7 @@ import Link from '@mui/material/Link';
 export default function Signin() {
   return (
     <div className={styles.filter}>
+      <div className={styles.bgImage}></div>
       <Container maxWidth="xl">
         <Box className={styles.container}>
           <Box className={styles.boxLogo}>

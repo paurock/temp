@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Signin from './pages/signin';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import BagPage from './pages/bagPage';
+import Home from "./pages/home";
 
 const theme = createTheme({
   components: {
@@ -114,6 +115,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="signin" element={<Signin />} />
             <Route path="bag" element={<BagPage />} />
           </Routes>

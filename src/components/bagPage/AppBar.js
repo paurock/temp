@@ -32,46 +32,56 @@ const ResponsiveAppBar = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: 'rgba(248,249,253,1)',
+      }}
+    >
       <Container maxWidth="xl">
-        <Toolbar disableGutters sx={{justifyContent:"flex-end",}} >
-
-        {/* DESKTOP LOGO */}
+        <Toolbar disableGutters sx={{ justifyContent: 'flex-end' }}>
+          {/* DESKTOP LOGO */}
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{cursor: 'pointer', width:'80px', height:'80px', ml:2,  display: { xs: 'none', md: 'flex' } }}
+            sx={{
+              cursor: 'pointer',
+              width: '80px',
+              height: '80px',
+              ml: 2,
+              display: { xs: 'none', md: 'flex' },
+            }}
           >
-             <img  src={logo} alt="logo" />
+            <img src={logo} alt="logo" />
           </Typography>
-        
+
           {/* DESKTOP MENU ITEMS */}
           <Box sx={{ flexGrow: 0.1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                sx={{ 
-                width: 'auto',   
-                minWidth:'initial',            
-                backgroundColor:'transparent', 
-                color:'#302a42', 
-                fontFamily: 'JournalSansNew',
-                fontSize:'19px',
-                fontWeight: '40',
-                whiteSpace:'nowrap',
-                border:'none',
-                pl:2.7,
-                pr:0,                 
-                letterSpacing:'initial',
-                '&:hover': {
-                  background:'none'
-                }
-              }}
+                sx={{
+                  width: 'auto',
+                  minWidth: 'initial',
+                  backgroundColor: 'transparent',
+                  color: '#302a42',
+                  fontFamily: 'JournalSansNew',
+                  fontSize: '19px',
+                  fontWeight: '40',
+                  whiteSpace: 'nowrap',
+                  border: 'none',
+                  pl: 2.7,
+                  pr: 0,
+                  letterSpacing: 'initial',
+                  '&:hover': {
+                    background: 'none',
+                  },
+                }}
                 key={page}
                 onClick={handleCloseNavMenu}
                 variant="text"
@@ -80,14 +90,19 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-          </Box>        
-          <Box sx={{justifyContent: 'flex-end', display: { xs: 'none', md: 'flex' } }}>
-            <IconButton onClick={handleOpenUserMenu} >
-              <YouTubeIcon/>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}></Box>
+          <Box
+            sx={{
+              justifyContent: 'flex-end',
+              display: { xs: 'none', md: 'flex' },
+              mb: 1.5,
+            }}
+          >
+            <IconButton onClick={handleOpenUserMenu}>
+              <YouTubeIcon />
             </IconButton>
-            <IconButton onClick={handleOpenUserMenu} >
-              <InstagramIcon/>
+            <IconButton onClick={handleOpenUserMenu}>
+              <InstagramIcon />
             </IconButton>
           </Box>
           {/* HAMBURGER ICON */}
@@ -97,7 +112,7 @@ const ResponsiveAppBar = () => {
               aria-label="menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}                            
+              onClick={handleOpenNavMenu}
             >
               <MenuIcon />
             </IconButton>
@@ -117,12 +132,12 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' }
+                display: { xs: 'block', md: 'none' },
               }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography  textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
